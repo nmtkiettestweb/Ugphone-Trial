@@ -1,0 +1,88 @@
+:root {
+    --bg-body: #05070a;
+    --bg-card: #0f172a;
+    --accent: #00e5ff;
+    --selected: #2563eb;
+    --border: #1e293b;
+    --text-dim: #94a3b8;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-body);
+    color: #ffffff;
+    margin: 0; padding: 20px;
+    display: flex; justify-content: center;
+}
+
+.container { width: 100%; max-width: 800px; }
+
+.banner {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    border-radius: 12px; padding: 25px;
+    display: flex; align-items: center; gap: 15px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+}
+
+.banner img { width: 45px; height: 45px; border-radius: 8px; background: #fff; padding: 2px; }
+.banner h1 { margin: 0; font-size: 24px; font-weight: 800; letter-spacing: 1px; }
+
+.card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.label { font-size: 11px; font-weight: 700; color: var(--text-dim); margin-bottom: 12px; display: block; text-transform: uppercase; }
+
+textarea {
+    width: 100%; height: 115px; background: #020617; border: 1px solid var(--border);
+    color: var(--accent); padding: 15px; border-radius: 8px; resize: none;
+    box-sizing: border-box; font-family: 'Consolas', monospace; margin-bottom: 20px; outline: none;
+}
+
+.server-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px; }
+
+.server-item {
+    background: #1e293b; border: 1px solid var(--border);
+    padding: 12px; border-radius: 10px;
+    display: flex; align-items: center; gap: 10px;
+    cursor: pointer; font-size: 13px; transition: 0.2s;
+    color: #f1f5f9; flex: 1; min-width: 145px; justify-content: center;
+}
+
+/* Nút khi được chọn - Luôn có hiệu ứng kể cả khi hết máy */
+.server-item.active {
+    background: var(--selected); border-color: #60a5fa;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+}
+
+.server-item img { width: 20px; border-radius: 2px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+
+/* Chấm trạng thái xanh/đỏ */
+.on { background: #10b981; box-shadow: 0 0 8px #10b981; }
+.off { background: #ef4444; box-shadow: 0 0 8px #ef4444; }
+
+.btn-main {
+    width: 100%; padding: 18px; border-radius: 10px; border: none;
+    background: #2563eb; color: white; font-weight: 800; font-size: 16px;
+    text-transform: uppercase; cursor: pointer; transition: 0.3s;
+}
+
+.btn-main:hover { background: #1d4ed8; transform: translateY(-1px); }
+
+.log-section {
+    margin-top: 25px; background: var(--bg-card);
+    border-radius: 12px; padding: 20px; border: 1px solid var(--border);
+}
+
+.log-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.btn-clear { background: #1e293b; border: none; color: var(--text-dim); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 11px; }
+
+#terminal {
+    background: #020617; height: 150px; border-radius: 8px; padding: 15px;
+    font-family: monospace; font-size: 12px; overflow-y: auto; color: #cbd5e1;
+}
+
+.log-line { margin-bottom: 5px; }
+.ts { color: #475569; margin-right: 10px; }

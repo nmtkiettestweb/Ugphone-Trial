@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGPhone Trial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <img src="https://www.ugphone.com/favicon.ico" alt="logo">
+            <div class="banner-text">
+                <h1>UGPHONE TRIAL</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="label">Dữ liệu đầu vào:</span>
+            <textarea id="inputData" placeholder="Dán dữ liệu console hoặc JSON vào đây..."></textarea>
+
+            <span class="label">Chọn cụm máy chủ:</span>
+            <div class="server-grid" id="serverList">
+                </div>
+
+            <button id="btnAction" class="btn-main">Tạo máy UGPhone</button>
+        </div>
+
+        <div class="log-section">
+            <div class="log-header">
+                <span class="label" style="margin:0">Nhật ký hệ thống</span>
+                <button id="clearLog" class="btn-clear">Xóa log</button>
+            </div>
+            <div id="terminal"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
